@@ -1,0 +1,98 @@
+ss<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+		<link rel="stylesheet" href="fonts/iconfont.css" />
+	</head>
+	<style type="text/css">
+		[v-cloak] {
+		  display: none;
+		}
+		.iconfont{
+			font-size:20px;
+		}
+		.mint-cell-allow-right{
+			display: none;
+		}
+		.mint-cell-wrapper{
+			padding:0px 12px;
+		}
+
+		.topbar{
+			background: #222;
+			opacity: 0.8;
+			height: 3.5em;
+		}
+
+		.mint-indexsection-index{
+			background: #eaeaea;
+		}
+	
+		.mint-tabbar > .mint-tab-item.is-selected{
+			background: none;
+			color:cornflowerblue;
+		}
+		.mint-cell-text {
+		  position: relative;
+		  top: -4px;
+		  padding-left:10px;
+		}
+		body{
+			margin:0;
+		}
+		html{
+		  background: #eaeaea;
+		}
+	</style>
+	<body>
+		<div id="app" v-cloak>
+			<mt-header title="Wechat" class="topbar">
+				<router-link to="/" slot="left">
+				<mt-button icon="back">返回</mt-button>
+				</router-link>
+				<mt-button icon="more" slot="right"></mt-button>	
+				</mt-header>
+			<mt-tab-container class="page-tabbar-container" v-model="selected">		
+				
+				
+				
+				<mt-tab-container-item id="record">
+					<mt-index-list>
+					  <mt-index-section v-for='i in 25' :index="String.fromCharCode((64+i))">
+					    <mt-cell :title='String.fromCharCode((64+i)) + "en"'></mt-cell>
+							<mt-cell :title='String.fromCharCode((64+i)) + "lan"'></mt-cell>
+					    <mt-cell :title='String.fromCharCode((64+i)) + "merik"'></mt-cell>
+					    <mt-cell :title='String.fromCharCode((64+i)) + "ustin"'></mt-cell>
+					  </mt-index-section>
+					</mt-index-list>
+				</mt-tab-container-item>
+				
+				
+			</mt-tab-container>
+			
+			<mt-tabbar v-model="selected" fixed>
+				
+				
+				<mt-tab-item id="record">
+					<i slot="icon" class='iconfont icon-tongxunlu'></i>
+					通讯录
+				</mt-tab-item>
+				
+			</mt-tabbar>
+		</div>
+		<script src="https://unpkg.com/vue@2.3.4/dist/vue.min.js"></script>
+		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+		<script type="text/javascript">
+			new Vue({
+				el: '#app',
+				data: {
+					selected: 'message'
+				},
+			})
+		</script>
+	</body>
+	
+</html>
