@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+		<link rel="stylesheet" href="fonts/iconfont.css" />
+	</head>
+	<style type="text/css">
+		[v-cloak] {
+		  display: none;
+		}
+		.iconfont{
+			font-size:20px;
+		}
+		.mint-cell-allow-right{
+			display: none;
+		}
+		.mint-cell-wrapper{
+			padding:0px 12px;
+		}
+
+		.topbar{
+			background: #222;
+			opacity: 0.8;
+			height: 3.5em;
+		}
+
+		.mint-indexsection-index{
+			background: #eaeaea;
+		}
+	
+		.mint-tabbar > .mint-tab-item.is-selected{
+			background: none;
+			color:cornflowerblue;
+		}
+		.mint-cell-text {
+		  position: relative;
+		  top: -4px;
+		  padding-left:10px;
+		}
+		body{
+			margin:0;
+		}
+		html{
+		  background: #eaeaea;
+		}
+	</style>
+	<body>
+		<div id="app" v-cloak>
+			<mt-header title="Wechat" class="topbar">
+				<router-link to="/" slot="left">
+					<mt-button icon="back">返回</mt-button>
+				</router-link>
+				<mt-button icon="more" slot="right"></mt-button>
+			</mt-header>
+			<mt-tab-container class="page-tabbar-container" v-model="selected">		
+			
+				
+				
+				<mt-tab-container-item id="my">
+					<mt-cell style='margin:10px 0;' is-link>
+						<img slot='icon' src="https://unsplash.it/60" width="60" height="60" style='float:left;margin:10px 10px 10px 0;'>
+						<div slot='title' style='padding-top:20px;'>
+							<div style='display: inline-block;'>Alan</div>
+							<div style='font-size:12px;color:#aaa;padding:7px 0'>微信号： XXXXXXXXXX</div>
+						</div>
+					</mt-cell>
+					<mt-cell title="钱包" is-link>
+					  <i slot="icon" class='iconfont icon-qianbao' style='color:#1296db'></i> 
+					</mt-cell>
+					<div style="margin:15px 0">
+						<mt-cell title="收藏" is-link>
+							<i slot="icon" class='iconfont icon-shoucang' style='color:lightcoral'></i>
+						</mt-cell>
+						<mt-cell title="相册" is-link>
+							<i slot="icon" class='iconfont icon-xiangce' style='color:#1296db'></i>
+						</mt-cell>
+						<mt-cell title="卡包" is-link>
+						  <i slot="icon" class='iconfont icon-wodeqiabao' style='color:mediumseagreen'></i>
+						</mt-cell>
+						<mt-cell title="表情" is-link>
+						  <i slot="icon" class='iconfont icon-tool-face' style='color:gold'></i>
+						</mt-cell>
+					</div>
+					<mt-cell title="设置" is-link>
+					  <i slot="icon" class='iconfont icon-setting' style='color:#1296db'></i>
+					</mt-cell>
+				</mt-tab-container-item>
+				
+			</mt-tab-container>
+			
+			<mt-tabbar v-model="selected" fixed>
+				<mt-tab-item id="message">
+					<i slot="icon" class='iconfont icon-message'></i>
+					消息
+				</mt-tab-item>
+				<mt-tab-item id="record">
+					<i slot="icon" class='iconfont icon-tongxunlu'></i>
+					通讯录
+				</mt-tab-item>
+				<mt-tab-item id="search">
+					<i slot="icon" class='iconfont icon-discovery-on'></i> 
+					发现
+				</mt-tab-item>
+				<mt-tab-item id="my">
+					<i slot="icon" class='iconfont icon-wo'></i> 
+					我
+				</mt-tab-item>
+			</mt-tabbar>
+		</div>
+		<script src="https://unpkg.com/vue@2.3.4/dist/vue.min.js"></script>
+		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+		<script type="text/javascript">
+			new Vue({
+				el: '#app',
+				data: {
+					selected: 'message'
+				},
+			})
+		</script>
+	</body>
+	
+</html>
