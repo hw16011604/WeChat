@@ -1,0 +1,9 @@
+.public-bg-color{
+	background: rgba(51, 51, 51, 1);
+}
+.public-bg-color a,.public-bg-color h1{
+	color:#FFFFFF
+}
+.mui-bar-tab .mui-tab-item.mui-active{
+	color:rgba(42, 200, 69, 1)
+}
