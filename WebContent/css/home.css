@@ -1,0 +1,45 @@
+@charset "UTF-8";
+.top-contain{
+	width:100%;
+	height:100px;
+	background-color:#D3D3D3;
+}
+.top-text{
+	display:inline-block;
+	float:left;
+	height:100px;
+	width:160px;
+	padding-left:30px;
+	font-size:35px;
+	
+	line-height:1;
+}
+.top-search{
+	display:inline-block;
+	height:100px;
+	float:right;
+	
+}
+.sousuo{
+	height:55px;
+	width:55px;
+	line-height:1;
+	margin-left:20px;
+	margin-top:20px;
+}
+.sousuo-contain{
+	height:100px;
+	display:inline-block;
+	float:left;
+	width:100px;
+	
+}
+.tianjia-contain{
+	height:100px;
+	display:inline-block;
+	float:left;
+	width:100px;
+}
+.choice{
+	position:absolute;
+}
