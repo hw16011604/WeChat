@@ -1,0 +1,44 @@
+
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 10px;
+}
+
+li {	/*	所有的li小圆点清除*/
+		list-style: none;
+	}
+a {
+	text-decoration: none;/*所有的A标签下划线清除*/
+}
+i {
+	font-style: normal;
+}
+
+.foot {	
+	height: 70px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.foot a {
+	display: block;
+	float: left;
+	height: 50px;
+	width: 25%;
+	color: #ccc;
+
+}
+.foot a img {
+	width: 50px;
+	height: 50px;
+	margin-left: 30px;
+}
+.foot a span {
+	display: block;
+	line-height: 20px;
+	text-align: center;
+}
