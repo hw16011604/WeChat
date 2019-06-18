@@ -1,0 +1,71 @@
+div,input{
+    margin: 0;
+    padding: 0;
+}
+hr{
+    margin: 0;
+    height: 1px;
+    border: none;
+    background-color: beige;
+}
+.hdtitle{
+    <!--border: 1px solid red;-->
+    font-size:16px;
+    color: limegreen;
+}
+.section{
+
+    text-align: center;
+  <!--  border: 1px solid red;-->
+}
+.section >p{
+    text-align: center;
+    font-size: 24px;
+
+}
+.imforminput{
+    line-height: 45px;
+    font-size:20px;
+    padding-left: 10px;
+
+
+}
+input{
+    border: none;
+    text-align: center;
+
+    color: black;
+    font-size: 20px;
+}
+
+.region-select{
+margin-left: 20px;
+}
+.region-select >span{
+    color: darkgrey;
+    margin-left: 150px;
+    font-size: 20px;
+}
+.phnum{
+    padding-right: 50px;
+    border-right: 1px solid beige;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.button{
+    height: 40px;
+    width: 90%;
+    margin-top: 30px;
+    color: white;
+    background-color: lightgreen;
+    border-radius: 4px;
+    border: 1px solid darkgray;
+}
+.foot {
+    margin-top: 130px;
+    text-align: center;
+    font-size: 12px;
+}
+.foot >p{
+    margin: 0;
+}
